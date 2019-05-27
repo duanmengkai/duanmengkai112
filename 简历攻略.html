@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="layui/css/daohanglan.css" />
+		<script type="text/javascript " src="layui/layui.js"></script>
+		<title>简历攻略</title>
+
+		<style>
+			.button {
+				color: red;
+				background-color: rgba(0, 0, 0, 0);
+				border: 1px solid red;
+				font-family: "微软雅黑";
+			}
+			
+			.button:hover {
+				color: white;
+				background: red;
+			}
+			
+			.aa:hover {
+				color: dodgerblue;
+				text-decoration: blink;
+			}
+			
+			.bb:hover {
+				color: dodgerblue;
+			}
+			
+			li {
+				color: black;
+			}
+			
+			.main {
+				width: 100%;
+				height: 100px;
+				border-radius: 10px;
+				/* 相对定位 */
+				position: relative;
+			}
+			
+			.mask {
+				/* 绝对定位 */
+				position: absolute;
+				width: 97%;
+				height: 100px;
+				background: darkgrey;
+				top: 0px;
+				margin-left: 6px;
+				/*border-radius: 10px;圆角*/
+				/* 透明度，本来想用 hiddle的发现不行，搞错了，用透明度比较好一些 */
+				opacity: 0;
+			}
+			/* 鼠标移动之后，让透明度恢复1 */
+			
+			.mask:hover {
+				opacity: 1;
+			}
+			
+			.layui-col-md main:hover {
+				position: absolute;
+				width: 97%;
+				height: 100px;
+				;
+				background: #999999;
+				top: 0px;
+				opacity: 0;
+			}
+		</style>
+	</head>
+
+	<body style="background: #F2F2F2;">
+		<div class="layui-fiuid">
+			<div class="layui-row">
+				<div class="layui-col-md8 layui-col-lg-offset2">
+					<p style="height: 40px; line-height: 40px; ">
+						<a href="" class="aa">首页</a>>
+						<a href="" class="aa">简历攻略</a>>
+						<a href="/zh-CN/blog" class="aa">推荐</a>
+					</p>
+					<div class="layui-row">
+
+						<!--111111左边部分1111111-->
+						<div class="layui-col-md8">
+							<div class="layui-carousel" id="test10">
+								<div carousel-item="" style="width: 100%;">
+									<div>
+										<a href="#"><img src="layui/images/thumb_WechatIMG2585.jpeg" style="width: 100%;" /></a>
+									</div>
+									<div>
+										<a href="#"><img src="layui/images/thumb_简历上如何_写出有价值的干货.png" style="width: 100%;" /></a>
+									</div>
+									<div>
+										<a href="#"><img src="layui/images/thumb_________________.png" style="width: 100%;" /></a>
+									</div>
+									<div>
+										<a href="#"><img src="layui/images/thumb_HR专访-京东.jpg" /></a>
+									</div>
+								</div>
+							</div>
+							<div class="layui-tab">
+								<ul class="layui-tab-title">
+									<li class="layui-this">推荐</li>
+									<li>简历内容</li>
+									<li>英文简历</li>
+									<li>简历格式</li>
+									<li>学生简历</li>
+									<li>简历投递</li>
+									<li>求职攻略</li>
+									<li>面试经验</li>
+								</ul>
+								<div class="layui-tab-content">
+									<div class="layui-tab-item layui-show">
+										<div style=" background: #FBFBFB;">
+											<div style=" background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_简历上到底应该有哪些信息_.png" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 25px; color: #23262E;"><strong>2019春招求职礼包大放送|各行业笔试面经</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																【春招全攻略】大礼包，2019 最新各行业面试经验总结，300+ 公司笔试含答案真题，四大、银行、互联网大厂 2018 真题，1000...
+															</div>
+															<div class="row" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_3f4157ecd100ae3dc364b8fe29d52162.jpg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 25px; color: #23262E;"><strong>干货|简历上那些内容才是HR眼中的干货？</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																简历千万不要写成JD，工作内容是千篇一律的，要体现出你的价值就要学会写好这些干货,想要知道什么是“干货”，我们可以先说一下干货的反义词...
+															</div>
+															<div class="row" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title________1920.png" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>简历到底怎么写 | 如何告别“废话”和“写不出来”？</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																手把手教你怎么写简历，详细讲解折磨了无数写简历同学的问题（和无数同学折磨我的问题）：怎么才能写出专业好简历
+															</div>
+															<div class="row" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_A-maze-ing_girls_-_thinking_maze.jpg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>知乎精选 | 大学生如何写好简历</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																学生简历的坑太多，今天这一篇就详细讲解每一块内容给你看！到底该用什么模板，该写什么内容，加分和减分项都有哪些
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_0cd0e983f91f70c08135ab4abd6e174.jpg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>毕业生福利|500 张 299元论文查重代金券免费领！</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																500 张价值299的 论文查重代金券免费领！有了这张券，十万字以下的论文，通通可以免费检测
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_pexels-photo-1342480.jpeg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>名企内推 | 超级简历带你走进“内推”</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																很多人找工作都是写简历-在招聘网站上海投-等面试这个万年不变，但其实找工作还有很多方法，比如内推。调查显示，通过内推找工作的人，...
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_pexels-photo-17082.jpeg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>金三银四即将到来，如何在短时间内成功跳槽？</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 20px;color: darkgray;">
+																职业规划是一个漫长且痛苦的过程，也是每个人的必经之路。我们为一千导过职业规划，有将近一半都想跳槽，而其中有很大一部分人，却是要么...
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_pexels-photo-567633.jpeg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>2019跳槽季，在找工作时有什么可以注意的地方？</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 20px;color: darkgray;">
+																2019的跳槽季就要来了，三月四月是人们跳槽的高峰期，很多人也都有跳槽的想法，但是跳槽需要面对的问题也很多。今天我们来谈谈，在 201..
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="layui-tab-item"><div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_pexels-photo-1342480.jpeg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>名企内推|超级简历带你走进“内推”</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																很多人找工作都是写简历-在招聘网站上海投-等面试这个万年不变的流程，但找工作还有很多方法，比如内推。调查显示，通过内推找工作的人，...
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div></div>
+									<div class="layui-tab-item"><div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_0cd0e983f91f70c08135ab4abd6e174.jpg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 20px; color: #23262E;"><strong>毕业生福利|500 张 299元论文查重代金券免费领！</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																500 张价值299的 论文查重代金券免费领！有了这张券，十万字以下的论文，通通可以免费检测
+															</div>
+															<div class="row item-text-desc hidden-xs" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div></div>
+									<div class="layui-tab-item"><div style="border: 1px solid gainsboro; background: #FBFBFB;">
+												<a href="#">
+													<div class="layui-row " style="height: 150px; ">
+														<div class="layui-col-md3 ">
+															<p><img src="layui/images/title_3f4157ecd100ae3dc364b8fe29d52162.jpg" style="height: 110px;padding-left:20px ;padding-top: 20px; " />
+															</p>
+														</div>
+														<div class="layui-col-md9 ">
+															<h2 style="padding-top: 20px;padding-left: 25px; color: #23262E;"><strong>干货|简历上那些内容才是HR眼中的干货？</strong></h2>
+															<div class="item-text-desc hidden-xs" style="padding-left: 25px;color: darkgray;">
+																简历千万不要写成JD，工作内容是千篇一律的，要体现出你的价值就要学会写好这些干货,想要知道什么是“干货”，我们可以先说一下干货的反义词...
+															</div>
+															<div class="row" style="height: 30px;color: darkgray;padding-top: 30px;">
+																<div class="layui-col-md6 " style="padding-left: 25px;">
+																	2019-2-22
+																</div>
+																<div class="layui-col-md6 " style="text-align: right;">
+																	56984
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div></div>
+									<div class="layui-tab-item">内容5</div>
+									<div class="layui-tab-item">内容3</div>
+									<div class="layui-tab-item">内容4</div>
+									<div class="layui-tab-item">内容5</div>
+								</div>
+							</div>
+
+							<!--<ul class="layui-nav layui-bg-white" style="background-color: rgba(255,255,255,0); width: auto;">
+									<li class="layui-nav-item layui-this">
+										<a href="" style="color: #000000;">推荐</a>
+									</li>
+									<li class="layui-nav-item ">
+										<a href="" style="color: #000000;">简历内容</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="" style="color: #000000;">英文简历</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="javascript:;" style="color: #000000;">简历格式</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="" style="color: #000000;">学生简历</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="" style="color: #000000;">简历投递</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="javascript:;" style="color: #000000;">求职攻略</a>
+									</li>
+									<li class="layui-nav-item">
+										<a href="" style="color: #000000;">面试经验</a>
+									</li>
+								</ul>-->
+
+							<!--111111111111左边中间部分1111122222222-->
+
+							<div id="demo0" style="margin-top: 50px;margin-left: 150px;"></div>
+
+						</div>
+
+						<!--11111111111111111111右半部分11111111111111111111111-->
+						<div class="layui-col-md4 " style="left: 10px; ">
+							<input type="text " name="username " autocomplete="off " placeholder="搜索... " class="layui-input " style="background-color: rgba(0,0,0,0.03);border: 1px solid gainsboro; " />
+
+							<div style="background: #FFFFFF;width: 100%;margin-top: 30px;border: 2px solid gainsboro; ">
+								<div style="line-height: 50px;padding-left: 5px; ">超级简历模板</div>
+
+								<!--右边，上半部分            添加一个边框border: 1px solid darkgoldenrod;-->
+								<div style="height: 100px;  " class="main headTwo">
+									<div class="layui-row grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/zero-exp-icon.png" style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">零经验实习简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px;color:#929393;margin-left: 5px; ">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+									<!--<div class="mask site-demo-button" id="layerDemos">
+										<button data-method="offset " data-type="auto " class="layui-btn layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px; ">中文模板</button>
+										<button class="layui-btn layui-btn-primary border mouse button" style="margin-top: 30px; margin-left: 60px; ">英文模板</button>
+									</div>-->
+								</div>
+								<hr width="90% " align="center " />
+								<div style="height: 100px; " class="main headTwo ">
+									<div class="layui-row  grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-college.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">学生求职简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px; color:#929393; margin-left: 5px;">此模板适用于学生找实习或全职，有一定实习经历的同学</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+								<hr />
+								<div style="height: 100px;" class="main headTwo ">
+									<div class="layui-row grid-demo " style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-classic.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">经典工作简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px;color:#929393; margin-left: 5px;">此模板适用于工作经验一年以上，想要变动工作的人士，适用于全行业</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+								<hr />
+								<div style="height: 100px;" class="main headTwo ">
+									<div class="layui-row  grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-investment.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">投行咨询简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px; color:#929393; margin-left: 5px;">此模板适用于投行，咨询，四大或外企工作岗位的人士</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+								<hr />
+								<div style="height: 100px;" class="main headTwo ">
+									<div class="layui-row grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-pm.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">产品经理简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px; color:#929393;margin-left: 5px;">此模板适用于互联网行业的相关岗位，有针对性的模块和指导</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+								<hr />
+								<div style="height: 100px;" class="main headTwo ">
+									<div class="layui-row grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-programmer.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">程序员简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px; color:#929393;margin-left: 5px;">此模板适用于互联网行业的程序员和技术求职者找全职工作、跳槽使用</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+								<hr />
+								<div style="height: 120px;" class="main headTwo ">
+									<div class="layui-row grid-demo" style="height: 60px; ">
+										<div class="layui-col-md2 ">
+											<p><img src="layui/images/tpl-plane.png " style="height: 50px;padding-left:5px ;padding-top: 5px; " />
+											</p>
+										</div>
+										<div class="layui-col-md10 ">
+											<p style="font-size: 16px;padding-top: 12px;padding-left: 25px; color: #23262E; ">留学英文简历模板</p>
+											<p style="font-size: 12px;padding-top: 7px;padding-left: 30px; color: gainsboro; ">319968999人使用</p>
+										</div>
+									</div>
+									<p style="font-size: 16px; color:#929393; margin-left: 5px;">此模板适用于想要出国留学的学生，有更多英文案例和引导</p>
+									<div class="site-demo-button mask" id="layerDemo" style="margin-bottom: 0; width: 100%; align-content: center;"> 
+   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal layui-btn-primary border mouse button " style="margin-top: 30px; margin-left: 35px;">中文模板</button>
+   
+</div>
+								</div>
+							</div>
+							<!--1111111111111111111111111111111111111-->
+
+							<div style="background: #FFFFFF;width: 100%;margin-top: 15px; ">
+								<div style="background: #FFFFFF;width: 100%;margin-top: 15px;border: 2px solid #C2C2C2; ">
+									<div style="line-height: 40px;padding-left: 15px; ">热门文章</div>
+
+									<!--右边，中间部分            添加一个边框border: 1px solid darkgoldenrod;-->
+									<div class="left11 ">
+										<div class="layui-row " style="height: 50px; ">
+											<div class="layui-col-md2 ">
+												<p><img src="layui/images/hot_title_hr____.png " style="height: 40px;width: 80%; padding-left:15px ;padding-top: 15px; " />
+												</p>
+											</div>
+											<div class="layui-col-md10 ">
+												<p style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">
+													<a href="# " class="bb ">干货|简历上哪些内容才是HR眼中的干货？</a>
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<hr />
+									<div class="left11 ">
+										<div class="layui-row " style="height: 50px; ">
+											<div class="layui-col-md2 ">
+												<p><img src="layui/images/hot_title_____-_________.png " style="height: 40px;width: 80%; padding-left:15px ;padding-top: 15px; " />
+												</p>
+											</div>
+											<div class="layui-col-md10 ">
+												<p style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">
+													<a href="# " class="bb ">知乎精选|大学生如何写好简历</a>
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<hr />
+									<div class="left11 ">
+										<div class="layui-row " style="height: 50px; ">
+											<div class="layui-col-md2 ">
+												<p><img src="layui/images/hot_title_pexels-photo-669615.jpeg " style="height: 40px;width: 80%; padding-left:15px ;padding-top: 15px; " />
+												</p>
+											</div>
+											<div class="layui-col-md10 ">
+												<p style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">
+													<a href="# " class="bb ">优秀个人简历范例分析，专业简历模板推荐 </a>
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<hr />
+									<div style="height: 50px; " class="left11 ">
+										<div class="layui-row " style="height: 50px; ">
+											<div class="layui-col-md2 ">
+												<p><img src="layui/images/hot_title_pexels-photo-1454360.jpeg " style="height: 40px;width: 80%; padding-left:15px ;padding-top: 15px; " />
+												</p>
+											</div>
+											<div class="layui-col-md10 ">
+												<p style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">
+													<a href="# " class="bb ">优秀个人简历范文参考，帮你写好大学生简历</a>
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<hr />
+									<div style="height: 50px; " class="left11 ">
+										<div class="layui-row " style="height: 50px; ">
+											<div class="layui-col-md2 ">
+												<p><img src="layui/images/hot_title_pexels-photo-267885.jpeg " style="height: 40px;width: 80%; padding-left:15px ;padding-top: 15px; " />
+												</p>
+											</div>
+											<div class="layui-col-md10 ">
+												<p href=" " style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">
+													<a href="# " class="bb ">大学生简历模板免费下载，优秀大学生简历范文参考</a>
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<hr />
+								</div>
+
+							</div>
+
+							<a href="#" style="margin-top: 30px; ">
+								<div style="background: #FFFFFF;width: 100%;margin-top: 20px;border: 2px solid #C2C2C2; ">
+									<div style="line-height: 50px;padding-left: 30px; ">超级简历模板</div>
+
+									<!--右边，下半部分            添加一个边框border: 1px solid darkgoldenrod;-->
+									<div style="height: 300px; " class="left11 ">
+										<div class="layui-row " style="height: 60px; ">
+											<div class="layui-col-md10 layui-col-lg-offset1 ">
+												<p><img src="layui/images/Bitmap@2x.png " style="height: 220px;width: 100%; padding-left:5px ;padding-top: 5px; " />
+												</p>
+											</div>
+											<div class="layui-col-md12 ">
+												<p style="font-size: 15px;padding-top: 12px;padding-left: 25px; color: #23262E;width: 90%; ">世界最顶级的辅导，拥有全球顶级企业的实战经验，迅速提升获得面试的效率</p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--111111111事件111111-->
+			<script>
+				layui.use(['carousel', 'form'], function() {
+					var carousel = layui.carousel,
+						form = layui.form;
+					//图片轮播
+					carousel.render({
+						elem: '#test10',
+						width: '100%',
+						height: '300px',
+						interval: 5000
+					});
+				});
+
+				layui.use(['laypage', 'layer'], function() {
+					var laypage = layui.laypage,
+						layer = layui.layer;
+
+					//总页数低于页码总数
+					laypage.render({
+						elem: 'demo0',
+						count: 50 //数据总数
+
+					});
+				});
+
+				//1111111111图片弹出
+				layui.use('layer', function() { //独立版的layer无需执行这一句
+					var $ = layui.jquery,
+						layer = layui.layer; //独立版的layer无需执行这一句
+
+					//触发事件
+					var active = {
+						setTop: function() {
+
+							}
+
+							,
+						offset: function(othis) {
+							var type = othis.data('type')
+
+							layer.open({
+								type: 1,
+								offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+									,
+								id: 'layerDemo' + type //防止重复弹出
+									,
+								content: '<img src="layui/images/stu-temp-cn@2x.png" />'
+
+									,
+								btn: '关闭全部',
+								btnAlign: 'c' //按钮居中
+									,
+								shade: 0.6 //不显示遮罩
+
+									,
+								yes: function() {
+									layer.closeAll();
+								}
+							});
+						}
+					};
+
+					layui.use('element', function() {
+						var $ = layui.jquery,
+							element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+					});
+
+					$('#layerDemo .layui-btn').on('click', function() {
+						var othis = $(this),
+							method = othis.data('method');
+						active[method] ? active[method].call(this, othis) : '';
+					});
+
+				});
+			</script>
+			
+			
+			<script>
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  var active = {
+    setTop: function(){
+
+      
+    }
+    
+    
+    ,offset: function(othis){
+      var type = othis.data('type')
+      
+      layer.open({
+        type: 1
+        ,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+        ,id: 'layerDemo'+type //防止重复弹出
+        ,content: '<img src="layui/images/stu-temp-cn@2x.png" />'
+        
+        ,btn: '关闭全部'
+        ,btnAlign: 'c' //按钮居中
+        ,shade: 0.6 //不显示遮罩
+       
+        ,yes: function(){
+          layer.closeAll();
+        }
+      });
+    }
+  };
+  
+  $('#layerDemo .layui-btn').on('click', function(){
+    var othis = $(this), method = othis.data('method');
+    active[method] ? active[method].call(this, othis) : '';
+  });
+  
+});
+</script>
+<script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
+	</body>
+	</body>
+
+</html>
